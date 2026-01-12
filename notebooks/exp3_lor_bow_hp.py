@@ -21,8 +21,9 @@ import dagshub
 dagshub.auth.add_app_token("48720272a898fe53ef1cd214bb4b9b4996189639")
 
 dagshub.init(repo_owner='RogueNinja240', repo_name='mlops-mini-project', mlflow=True)
+mlflow.set_tracking_uri("https://dagshub.com/RogueNinja240/mlops-mini-project.mlflow")
 
-mlflow.set_experiment('Logistic Regression Baseline')
+mlflow.set_experiment('LoR_BoW-hp')
 
 # Load the data
 df = pd.read_csv('https://raw.githubusercontent.com/campusx-official/jupyter-masterclass/main/tweet_emotions.csv').drop(columns=['tweet_id'])
